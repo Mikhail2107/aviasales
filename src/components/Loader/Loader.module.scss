@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  .icon {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(../../assets/images/plane.png) ;
+    animation-name: plane;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 2;
+    background-size: cover;
+  }
+  
+  @keyframes plane {
+    0% {
+      margin-left: -50px;
+    }
+    100% {
+      margin-left: 100%;
+    }
+  }
+  
+  .hideLine {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #F3F7FA;
+      height: 30px;
+      animation-name: line;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      align-self: self-end;
+      z-index: 1;
+  }
+  
+  @keyframes line {
+      0% {
+          width: 100%;;
+      }
+      100% {
+          width: 1px;;
+      }
+    }
+  
+  .line {
+      position: absolute;
+      bottom: 15px;
+      margin-top: 40px;
+      width: 100%;
+      background-image: linear-gradient(to right, rgb(29, 153, 255), rgb(172, 225, 238));
+      height: 5px;
+  }

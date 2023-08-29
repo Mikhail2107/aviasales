@@ -1,0 +1,20 @@
+$colorButton: #2196f3;
+$colorButtonHover: #0577b9;
+
+.button-see-more {
+    height: 50px;
+    width: 100%;
+    background-color: $colorButton;
+    color: white;
+    padding: 15px 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    
+    &:hover {
+      background-color: $colorButtonHover;
+    }
+}

@@ -1,0 +1,53 @@
+$baseColor: white;
+$priceColor: #2196f3;
+$headerInfoColor: #a0b0b9;
+$colorShadow: rgba(0, 0, 0, 0.1);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 184px;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  background-color: $baseColor;
+  box-shadow: 0 2px 8px $colorShadow;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  color: $priceColor;
+}
+
+.logoCompany {
+  height: 36px;
+}
+
+.infoContainer {
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+
+  &__header {
+    color: $headerInfoColor;
+  }
+}

@@ -1,0 +1,65 @@
+$checkedTabColor: #2196f3;
+$tabStandart: white;
+$tabBorder: #dfe5ec;
+$colorInsetShadow: #56a7bb;
+
+.container {
+  position: relative;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  border: solid 1px $tabBorder;
+
+}
+
+.tab {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: $tabStandart;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  & > input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  & > label {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    height: 50px;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    padding: 19px 0;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: inset 0 0 6px $colorInsetShadow;
+      transition: 0.2s;
+    }
+  }
+
+  & > input[type="radio"]:checked + label {
+    width: 50%;
+    height: 50px;
+    background-color: $checkedTabColor;
+    color: $tabStandart;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 19px 0;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}

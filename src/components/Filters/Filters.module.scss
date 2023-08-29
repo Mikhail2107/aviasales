@@ -1,0 +1,97 @@
+$colorChecked: #2196f3;
+$colorCheckbox: #9abbce;
+$colorHovered: #f1fcff;
+$colorStandart: white;
+$colorShadow: rgba(0, 0, 0, 0.1);
+
+.container {
+  position: relative;
+  width: 100%;
+  grid-column-start: 1;
+  box-shadow: 0 2px 8px $colorShadow;
+  background-color: $colorStandart;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+
+  @media (min-width: 710px) {
+    height: 255px;
+    padding-bottom: 0;
+  }
+}
+
+.header {
+  padding: 20px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: 710px) {
+    display: block;
+  }
+}
+
+.filterContainer {
+  display: flex;
+}
+
+.filter {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 13px 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.3s;
+    background-color: $colorHovered;
+  }
+
+  &__button {
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  &__text {
+    cursor: pointer;
+    margin-left: 30px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 8px;
+      width: 20px;
+      height: 20px;
+      border: solid 1px $colorCheckbox;
+      border-radius: 2px;
+      margin-left: -30px;
+    }
+  }
+  @media (min-width: 710px) {
+    border-radius: 0;
+  }
+}
+
+input[type="checkbox"]:checked + .filter__text::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: solid 1px $colorChecked;
+  border-radius: 2px;
+  background-image: url(../../assets/images/Shape.svg);
+  background-size: 12px 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
